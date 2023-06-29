@@ -31,12 +31,15 @@ export default class HolbertonCourse {
     return this._students; // eslint-disable-line
   }
 
-  set students(value) {
-    value.forEach((element) => {
-      if (typeof element !== 'string') {
-        throw new TypeError('Students must be an array of strings');
+  set students(students) {
+    if (typeof students !== 'object') {
+      throw TypeError('students must be array of strings');
+    }
+    for (const val of students) {
+      if (typeof val !== 'string') {
+        throw TypeError('students must be array of strings');
       }
-    });
-    this._students = value; // eslint-disable-line
+    }
+    this._students = students; // eslint-disable-line
   }
 }
