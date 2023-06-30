@@ -13,7 +13,7 @@ export default class HolbertonCourse {
       if (typeof val !== 'string') {
         throw TypeError('students must be array of strings');
       }
-    }  
+    }
     this._name = name; // eslint-disable-line
     this._length = length; // eslint-disable-line
     this._students = students; // eslint-disable-line
