@@ -1,5 +1,5 @@
 export default function cleanSet(aSet, aString) {
-  if (!(aSet instanceof Set) || typeof aString !== 'string' || aString === '') {
+  if (!(aSet instanceof Set) || typeof aString !== 'string' || aString.length == 0) {
     return '';
   }
   let newString = '';
