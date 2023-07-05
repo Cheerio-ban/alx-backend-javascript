@@ -1,7 +1,7 @@
 export default function updateStudentGradeByCity(
   getListStudent,
   city,
-  newGrades
+  newGrades,
 ) {
   getListStudent
     .filter((elem) => elem.location === city)
@@ -10,7 +10,7 @@ export default function updateStudentGradeByCity(
         if (grades.studentId === elem.id) {
           return { ...elem, grade: grades.grade };
         }
-        return { ...elem, grade: "N/A" };
       }
+      return { ...elem, grade: 'N/A' };
     });
 }
