@@ -50,11 +50,11 @@ const countStudents = (filename) => new Promise((resolve, reject) => {
 });
 
 const port = 1245;
-const app = express()
+const app = express();
 
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
-})
+});
 
 app.get('/students', (req, res) => {
   res.write('This is the list of our students\n');
@@ -65,7 +65,7 @@ app.get('/students', (req, res) => {
     res.statusCode = 404;
     res.end('Cannot load the database');
   });
-})
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
